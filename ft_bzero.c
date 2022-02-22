@@ -6,16 +6,16 @@
 /*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 22:03:12 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/19 22:04:57 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/02/22 18:20:24 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*p;
-	int				i;
+	size_t			i;
 
 	p = s;
 	i = 0;
