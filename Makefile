@@ -6,7 +6,7 @@
 #    By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 23:23:45 by nrujipun          #+#    #+#              #
-#    Updated: 2022/02/22 22:08:49 by nrujipun         ###   ########.fr        #
+#    Updated: 2022/02/23 15:32:39 by nrujipun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,11 @@ TARGET = ft_isalpha.c \
 	 ft_memmove.c \
 	 ft_strlcpy.c \
 	 ft_strlcat.c \
-	 ft_toupper.c\
-	 ft_tolower.c\
+	 ft_toupper.c \
+	 ft_tolower.c \
+	 ft_strchr.c \
+	 ft_strrchr.c \
+	 ft_strncmp.c \
 
 NAME = libft.a
 
