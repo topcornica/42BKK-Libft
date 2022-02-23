@@ -6,7 +6,7 @@
 #    By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 23:23:45 by nrujipun          #+#    #+#              #
-#    Updated: 2022/02/23 15:32:39 by nrujipun         ###   ########.fr        #
+#    Updated: 2022/02/23 16:05:37 by nrujipun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ TARGET = ft_isalpha.c \
 	 ft_strchr.c \
 	 ft_strrchr.c \
 	 ft_strncmp.c \
+	 ft_atoi.c \
 
 NAME = libft.a
 

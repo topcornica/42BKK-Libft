@@ -6,7 +6,7 @@
 /*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 21:21:41 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/23 15:33:17 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/02/23 16:05:15 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ int			ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
-
+int	ft_atoi(const char *s);
 #endif
