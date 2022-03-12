@@ -6,7 +6,7 @@
 /*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:42:51 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/24 15:49:28 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/03/01 09:48:14 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,29 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
+	j = 0;
 	if (!*needle)
 		return ((char *)haystack);
-	while (*(haystack + i) != '\0' && *(needle + i) != '\0' && i < len)
+	while (*(haystack + j) != '\0' && j < len)	
 	{
-		if (*(needle + i) == *(haystack + i))
-			return ((char *)&haystack[i]);
-		i++;
+		k = j;
+		while (*(needle + i) == *(haystack + j))
+		{
+			while ((*(needle + i) == *(haystack + j))
+					&& ((needle[i++] != 0 
+						&& haystack[j++] != 0)
+						&& j < len))
+				continue;
+			if (needle[i] == 0)
+				return ((char *)&haystack[j]);
+		}
+		i = 0;
+		j = k + 1;
+		j++;
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	char haystack[30] = "aaabcabcd";
-	//char needle[10] = "aabc";
-	//char * empty = (char*)"";
-
-	printf("%s\n", ft_strnstr(haystack, "c", -1));
-	printf("%s\n", strnstr(haystack, "c", -1));
-	printf("%s\n", haystack + 4);
-}*/
