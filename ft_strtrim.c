@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 14:25:35 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/27 23:23:57 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/03/18 21:17:28 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 			}
 			j++;
 		}
-		printf("%c\n", *(s1 + i));
 		j = 0;
-		i++;	
+		i++;
 	}
 	*(res + j) = '\0';
 	return ((char *)res);

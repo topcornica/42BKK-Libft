@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 22:17:40 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/03/16 23:21:42 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/03/18 21:14:25 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,43 +33,27 @@ static int	count_char(int n)
 	return (i);
 }
 
-/*char	*reverse_str(char *s)
+static int	ft_negative(int n)
 {
-	char	*sub_s;
-	size_t		i;
-	size_t		j;
-
-	i = ft_strlen(s);
-	j = 0;
-	sub_s = (char *)malloc(i * sizeof(char));
-	if (s[0] == '-')
-	{
-		sub_s[0] = '-';
-		j++;
-	}
-	while (*(s + j) != 0 && j < i)
-	{
-		*(sub_s + j) = *(s + i);
-		j++;
-		i--;
-	}
-	return (sub_s);
-}*/
+	if (n < 0)
+		return (1);
+	else
+		return (0);
+}
 
 char	*ft_itoa(int n)
 {
+	int	neg;
 	char	*sub;
-	int		c;
-	int		f;
+	int	f;
+	int	c;
 
-	c = 0;
+	neg = ft_negative(n);
+	c = n;
 	f = count_char(n);
 	sub = (char *)malloc(f * sizeof(char));
 	if (n < 0)
-	{
-		sub[0] = '-';
 		n = n * -1;
-	}
 	while (n > 0)
 	{
 		if (f > 0)
@@ -80,5 +64,7 @@ char	*ft_itoa(int n)
 			f--;
 		}
 	}
+	if (neg == 1)
+		sub[0] = '-';
 	return (sub);
 }
