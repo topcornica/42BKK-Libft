@@ -6,7 +6,7 @@
 #    By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 23:23:45 by nrujipun          #+#    #+#              #
-#    Updated: 2022/03/16 22:35:36 by nrujipun         ###   ########.fr        #
+#    Updated: 2022/05/20 19:38:41 by nrujipun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,8 @@ TARGET = ft_isalpha.c \
 	 ft_strjoin.c \
 	 ft_strtrim.c \
 	 ft_itoa.c \
+	 ft_striteri.c\
+	 ft_strmapi.c\
 
 NAME = libft.a
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:21:12 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/19 19:34:39 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/04/02 16:40:05 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
 	printf("%i", ft_isalpha(1));
 	printf("%i", ft_isalpha('A'));

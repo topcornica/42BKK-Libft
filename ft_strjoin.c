@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 19:37:21 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/25 14:38:29 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/04/13 11:07:37 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 static char	*ft_strcat(unsigned char *dst, const char *src)
 {
-	unsigned char	*d;
 	size_t	i;
 	size_t	j;
 
-	d = dst;
 	i = 0;
 	j = 0;
 	if (ft_strlen((const char *)dst) > 0)
