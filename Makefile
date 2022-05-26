@@ -6,7 +6,7 @@
 #    By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 23:23:45 by nrujipun          #+#    #+#              #
-#    Updated: 2022/05/26 19:30:59 by nrujipun         ###   ########.fr        #
+#    Updated: 2022/05/26 22:51:25 by nrujipun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ TARGET = ft_isalpha.c \
 	 ft_putstr_fd.c\
 	 ft_putendl_fd.c\
 	 ft_putnbr_fd.c\
+	 ft_split.c\
 
 NAME = libft.a
 
