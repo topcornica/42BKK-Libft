@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 21:21:41 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/05/26 19:25:17 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/05/26 20:15:34 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,11 @@ int			ft_isascii(int c);
 int			ft_isprint(int c);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_atoi(const char *s);
+
+typedef struct s_list
+{
+	void	*content;
+	struct slist	*next;
+}	t_list;
 
 #endif

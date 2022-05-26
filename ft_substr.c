@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 15:56:49 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/03/16 21:49:54 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/05/26 22:26:03 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		substr[0] = '\0';
 		return(substr);
 	}
-	substr = (char *)malloc(len * sizeof(char));
+	substr = (char *)malloc((ft_strlen(s) - start) * sizeof(char));
 	while (*(s + start + i) != '\0' && i < len)
 	{
 		*(substr + i) = *(s + start + i);

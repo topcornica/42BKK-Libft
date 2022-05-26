@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 19:37:21 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/04/13 11:07:37 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/05/26 22:38:08 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,10 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	sum = ft_strlen(s1) + ft_strlen(s2);
 	ret = (unsigned char *)malloc(sum * sizeof(unsigned char *));
-	ft_strcat(ret, s1);
-	ft_strcat(ret, s2);
+	if (s1 > 0)
+		ft_strcat(ret, s1);
+	if (s2 > 0)
+		ft_strcat(ret, s2);
 	*(ret + ft_strlen(s1) + ft_strlen(s2)) = '\0';
 	return ((char *)ret);
 }
