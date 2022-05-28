@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 22:17:40 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/04/13 11:07:08 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/05/28 18:54:30 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ char	*ft_itoa(int n)
 	neg = ft_negative(n);
 	c = n;
 	f = count_char(n);
-	sub = (char *)malloc(f * sizeof(char));
+	sub = (char *)malloc((f + 1) * sizeof(char));
+	sub[f] = '\0';
 	if (n < 0)
 		n = n * -1;
 	while (n > 0)
