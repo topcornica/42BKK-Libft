@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 21:21:41 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/05/26 22:51:57 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/01 18:21:28 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char	**ft_split(char const *s, char c);
+//char	**ft_split(char const *s, char c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
