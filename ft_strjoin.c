@@ -6,13 +6,13 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 19:37:21 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/06/01 19:02:51 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/02 14:25:42 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcat(unsigned char *dst, const char *src)
+static char	*ft_strcat(char *dst, const char *src)
 {
 	size_t	i;
 	size_t	j;
@@ -31,21 +31,26 @@ static char	*ft_strcat(unsigned char *dst, const char *src)
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	unsigned char	*ret;
+	char	*ret;
 	size_t	sum;
 	
+	if (s1 == NULL)
+		ret = ft_strdup(s2);
+	if (s2 == NULL)
+		ret = ft_strdup(s1);
 	sum = ft_strlen(s1) + ft_strlen(s2) + 1;
-	ret = (unsigned char *)malloc(sum * sizeof(char));
-	if (s1 > 0)
-		ft_strcat(ret, s1);
-	if (s2 > 0)
-		ft_strcat(ret, s2);
-	*(ret + ft_strlen(s1) + ft_strlen(s2)) = '\0';
+	ret = (char *)malloc(sum * sizeof(char));
+	if (!ret)
+		return (NULL);
+	ft_strcat(ret, s1);
+	ft_strcat(ret, s2);
+	*(ret + (sum - 1))  = '\0';
 	return ((char *)ret);
 }
 /*
 int	main(void)
 {
-	char * s = ft_strjoin("tripouille", "42");
+	char * s = ft_strjoin("", "42");
 	printf("%s\n", s);
+	printf("%i\n", strcmp(s, "42"));
 }*/
