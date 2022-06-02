@@ -6,46 +6,48 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 19:37:21 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/06/02 14:25:42 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/02 15:57:13 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcat(char *dst, const char *src)
+static char	*ft_join(const char *src1, const char *src2)
 {
 	size_t	i;
 	size_t	j;
+	size_t	sum;
+	char	*res;
 
 	i = 0;
 	j = 0;
-	if (ft_strlen((const char *)dst) > 0)
-		j = ft_strlen((const char *)dst);
-	while (*(src + i) != '\0')
+	sum = ft_strlen(src1) + ft_strlen(src2) + 1;
+	res = (char *)malloc(sum * sizeof(char));
+	if (!res)
+		return (NULL);
+	while (*(src1 + i) != '\0')
 	{
-		*(dst + i + j) = *(src + i);
+		*(res + i) = *(src1 + i);
 		i++;
 	}
-	return ((char *)dst);
+	while (*(src2 + j) != '\0')
+	{
+		*(res + i + j) = *(src2 + j);
+		j++;
+	}
+	*(res + i + j) = '\0';
+	return (res);
+	
 }
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	char	*ret;
-	size_t	sum;
-	
 	if (s1 == NULL)
-		ret = ft_strdup(s2);
-	if (s2 == NULL)
-		ret = ft_strdup(s1);
-	sum = ft_strlen(s1) + ft_strlen(s2) + 1;
-	ret = (char *)malloc(sum * sizeof(char));
-	if (!ret)
-		return (NULL);
-	ft_strcat(ret, s1);
-	ft_strcat(ret, s2);
-	*(ret + (sum - 1))  = '\0';
-	return ((char *)ret);
+		return (ft_strdup(s2));
+	else if (s2 == NULL)
+		return (ft_strdup(s1));
+	else
+		return (ft_join(s1, s2));
 }
 /*
 int	main(void)
