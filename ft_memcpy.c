@@ -6,7 +6,7 @@
 /*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 22:08:24 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/22 18:22:25 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/04 17:08:02 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	d = dst;
 	s = src;
+	if (!d && !s)
+		return (0);
 	while (i < n)
 	{
 		*(d + i) = *(s + i);
