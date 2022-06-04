@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 22:47:15 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/05/26 22:53:29 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:46:29 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ size_t	ft_slen(const char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	register char	**str;
-	size_t			i;
-	size_t			len;
+	char	**str;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	if (!s)
 		return (NULL);
-	str= (char **)malloc(sizeof (char *) * (ft_slen(s, c) + 1));
+	str = malloc(sizeof (char *) * (ft_slen(s, c) + 1));
 	if (!str)
 		return (NULL);
 	while (*s)

@@ -6,36 +6,45 @@
 /*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 22:15:08 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/22 23:30:48 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/04 11:18:45 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	f_strnlen(const char *str, size_t max)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < max)
+	{
+		if (str[i] == '\0')
+			break ;
+		i++;
+	}
+	return (i);
+}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dlen;
 	size_t	slen;
 	size_t	i;
-	size_t	sum;
 
 	i = 0;
-	sum = 0;
-	dlen = ft_strlen(dst);
+	dlen = f_strnlen(dst, dstsize);
 	slen = ft_strlen(src);
-	if (dstsize == 0)
-		return (slen);
-	if (dstsize < dlen)
-		sum = slen + dstsize;
+	if (dstsize == dlen)
+		return (slen + dstsize);
+	if ((dstsize - dlen) > slen)
+		ft_memcpy(dst + dlen, src, slen + 1);
 	else
-		sum = slen + dlen;
-	while ((dlen + i) < dstsize - 1 && *(src + i) != '\0')
 	{
-		*(dst + dlen + i) = *(src + i);
-		i++;
+		ft_memcpy(dst + dlen, src, dstsize - dlen - 1);
+		dst[dstsize - 1] = 0;
 	}
-	dst[dlen + i] = 0;
-	return (sum);
+	return (slen + dlen);
 }
 /*
 int	main(void)

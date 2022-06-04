@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 22:17:40 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/06/01 19:33:13 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:46:55 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ static int	ft_negative(int n)
 
 char	*ft_itoa(int n)
 {
-	int	neg;
+	int		neg;
 	char	*sub;
-	int	f;
+	int		f;
 
 	neg = ft_negative(n);
 	f = count_char(n);

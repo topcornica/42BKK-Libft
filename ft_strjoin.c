@@ -6,7 +6,7 @@
 /*   By: nrujipun <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 19:37:21 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/06/02 15:57:13 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:45:53 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ static char	*ft_join(const char *src1, const char *src2)
 	}
 	*(res + i + j) = '\0';
 	return (res);
-	
 }
 
 char	*ft_strjoin(const char *s1, const char *s2)

@@ -6,7 +6,7 @@
 /*   By: nrujipun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:31:18 by nrujipun          #+#    #+#             */
-/*   Updated: 2022/02/23 16:42:30 by nrujipun         ###   ########.fr       */
+/*   Updated: 2022/06/04 11:06:36 by nrujipun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*str1;
 	unsigned char	*str2;
-	size_t	i;
+	size_t			i;
 
 	i = 0;
 	str1 = (unsigned char *)s1;
